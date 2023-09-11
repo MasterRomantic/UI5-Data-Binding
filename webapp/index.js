@@ -9,6 +9,12 @@ sap.ui.require([
     // Attach an anonymous function to the SAPUI5 'init' event
     // NB: dont use "sap.ui.getCore()" in production apps, rather "this.getView().getModel()"
     sap.ui.getCore().attachInit(function() {
+
+    // set the products model to the core (should be the view remember NB).
+    var oProductModel = new JSONModel();
+    oProductModel.loadData("./model/products.json");
+    sap.ui.getCore().setModel(oProductModel, "products");
+
         //Create a JSON model from an object literal
         var oModel = new JSONModel({
             firstName: "Bruce",
@@ -42,8 +48,14 @@ sap.ui.require([
         sap.ui.getCore().setModel(oModel);
 
         // Display the XML view called "App"
-        new XMLView({
+        var oView = new XMLView({
             viewName: "sap.ui.demo.db.View.App"
-        }).placeAt("content");
+        });
+
+        // Register the view with the message manager
+        sap.ui.getCore().getMessageManager().registerObject(oView, true);
+
+        // Insert the view into the DOM
+		oView.placeAt("content");
     });
 })
