@@ -10,3 +10,5 @@ Link to actual Data Binding Tutorial can be found [here](https://sapui5.hana.ond
 Link to YouTube video explaining the walkthrough can be found [here](https://www.youtube.com/watch?v=zaeztGyqiBw).
 
 Getting started guide to help you set up your UI5 CLI can be found [here](https://sap.github.io/ui5-tooling/v3/pages/GettingStarted/).
+
+If you are new to UI5, I recommend starting with the UI5 guided walkthrough. You can find my guided walkthrough repository [here](https://github.com/MasterRomantic/SAP-UI5-Walkthrough).
