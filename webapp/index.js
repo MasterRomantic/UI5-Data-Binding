@@ -14,16 +14,16 @@ sap.ui.require([
             firstName: "Bruce",
             lastName: "Wayne",
             enabled: true,
+            address:{
+                street: "1007 Mountain Drive",
+                city: "Gotham City",
+                zip: "69190",
+                country: "USA"
+            },
             panelHeaderText: "Data Binding Basics"
         });
 
         // Create a resource bundle for language specific texts
-		// the configured supportedLocales represent the i18n files present:
-		// * "" - i18n/i18n.properties
-		// the configured fallbackLocale should represent one of these files
-		// * "" - according to the fallback chain the root bundle is the last fallback.
-		//   Configuring it explicitly avoids side effects when additional resource files are added.
-		// @see https://ui5.sap.com/#/topic/ec753bc539d748f689e3ac814e129563
         var oResourcemodel = new ResourceModel({
             bundleName: "sap.ui.demo.db.i18n.i18n",
             supportedLocales: ["", "de"],
