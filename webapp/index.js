@@ -27,6 +27,7 @@ sap.ui.require([
                 country: "USA"
             },
             salesAmount: 12345.6789,
+            priceTheshold: 20,
             currencyCode: "EUR",
             panelHeaderText: "Data Binding Basics"
         });
